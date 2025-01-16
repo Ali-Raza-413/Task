@@ -185,7 +185,7 @@ const Settings = () => {
                 <div className="flex flex-col space-y-2 mt-5">
                   <div className="flex gap-2">
                     <select
-                      className="px-4 py-2 rounded-lg text-[14px] border border-[#71788E] w-[607px] h-[48px]"
+                      className="px-4 py-2 rounded-lg text-[14px] border border-[#71788E] w-[500px] 2xl:w-[607px] h-[48px]"
                       value={selectedTreatment}
                       onChange={(e) => setSelectedTreatment(e.target.value)}
                     >
@@ -237,13 +237,13 @@ const Settings = () => {
                   <div className="flex space-x-2 mt-3 flex-col xl:flex-row">
                     <button
                       onClick={() => setIsAdding(false)}
-                      className="px-4 py-2 border border-gray-200 text-black rounded-lg w-[327px] h-[48px]"
+                      className="px-4 py-2 border border-gray-200 text-black rounded-lg w-[100%] 2xl:w-[327px] h-[48px]"
                     >
                       Cancel
                     </button>
                     <button
                       onClick={handleAddTreatment}
-                      className="px-4 py-2 bg-[#6968EC] text-white rounded-lg w-[327px] h-[48px]"
+                      className="px-4 py-2 bg-[#6968EC] text-white rounded-lg w-[100%] 2xl:w-[327px] h-[48px]"
                     >
                       Save
                     </button>

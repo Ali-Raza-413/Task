@@ -6,8 +6,10 @@ const Layout = ({ children }) => {
   return (
     <div className="h-screen flex flex-col">
       <Navbar />
-      <div className="flex flex-1">
+      <div className="flex flex-1 ">
+        <div className='hidden lg:block'>
         <Sidebar />
+        </div>
         <main className="flex-1 p-4">
           {children}
         </main>
