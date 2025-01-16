@@ -14,13 +14,19 @@ const Settings = () => {
   const [isAdding, setIsAdding] = useState(false);
 
   useEffect(() => {
-    const savedTreatments =
-      JSON.parse(localStorage.getItem("treatments")) || {};
-    setAddedTreatments(savedTreatments);
+    // Ensure that localStorage is accessed only on the client side
+    if (typeof window !== "undefined") {
+      const savedTreatments =
+        JSON.parse(localStorage.getItem("treatments")) || {};
+      setAddedTreatments(savedTreatments);
+    }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("treatments", JSON.stringify(addedTreatments));
+    // Ensure that localStorage is accessed only on the client side
+    if (typeof window !== "undefined") {
+      localStorage.setItem("treatments", JSON.stringify(addedTreatments));
+    }
   }, [addedTreatments]);
 
   const handleCategoryClick = (category) => {
